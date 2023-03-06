@@ -62,6 +62,9 @@ function App() {
 						let index = pool.findIndex((t) => t === task)
 						pool.splice(index)
 					})
+					.catch(() => {
+						failList.push(element)
+					})
 					.finally(() => {
 						finish++
 						// 所有请求都请求完成
