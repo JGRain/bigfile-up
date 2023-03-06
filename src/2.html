@@ -36,6 +36,7 @@
 					chunk: file.slice(cur, cur + size),
 				})
 			}
+
 			// 控制并发和断点续传
 			const uploadFileChunks = async function (list) {
 				if (list.length === 0) {
